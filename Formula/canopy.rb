@@ -5,23 +5,23 @@
 class Canopy < Formula
   desc "Terminal UI for managing parallel AI coding agents"
   homepage "https://github.com/isacssw/canopy"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/isacssw/canopy/releases/download/v0.5.0/canopy_darwin_amd64.tar.gz"
-      sha256 "90e7ba6afaf3a77bee542f1949ef306901b68a77852dc0b470219e55bc415305"
+      url "https://github.com/isacssw/canopy/releases/download/v0.6.0/canopy_darwin_amd64.tar.gz"
+      sha256 "95b5cb760f155dd7d61539ae01569c72dc593ef27a86bc9adca204991c2e8a0e"
 
       define_method(:install) do
         bin.install "canopy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/isacssw/canopy/releases/download/v0.5.0/canopy_darwin_arm64.tar.gz"
-      sha256 "8e3a390723b6c3f344f9cb81c7e3a62e7264f891785745e77d53bc8cdd4c4ace"
+      url "https://github.com/isacssw/canopy/releases/download/v0.6.0/canopy_darwin_arm64.tar.gz"
+      sha256 "1dd3300651fe71d4cfc610dbe385e1af51a7dc8db3981ef94f4d5ae6a0c0e0f7"
 
       define_method(:install) do
         bin.install "canopy"
@@ -31,15 +31,15 @@ class Canopy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isacssw/canopy/releases/download/v0.5.0/canopy_linux_amd64.tar.gz"
-      sha256 "aecfac0d7798cfd44467733522aa15b1588680dd568b672baa3cfb7a4d84a408"
+      url "https://github.com/isacssw/canopy/releases/download/v0.6.0/canopy_linux_amd64.tar.gz"
+      sha256 "2563072417f2e4f8314cf85ae16a6efd8f7f63e70ee9cf8be5bd3ad6db1fa0ea"
       define_method(:install) do
         bin.install "canopy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/isacssw/canopy/releases/download/v0.5.0/canopy_linux_arm64.tar.gz"
-      sha256 "04dcb8891f3a4c1ca2f53e73b20ceab1d781e4714afdd780dc5e637ff3087332"
+      url "https://github.com/isacssw/canopy/releases/download/v0.6.0/canopy_linux_arm64.tar.gz"
+      sha256 "0e12633740af0bcb23d83db95b8115524b00cd5218d95ae983dea1608219849c"
       define_method(:install) do
         bin.install "canopy"
       end
